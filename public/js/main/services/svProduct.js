@@ -4,5 +4,8 @@ app.factory('svProduct',['$http', function ($http) {
         getProducts: function () {
             return $http.get('/api/products');
         },
+        getCompanies: function () {
+            return $http.get('/api/companies');
+        }
     };
 }]);

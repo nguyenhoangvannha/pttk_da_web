@@ -6,4 +6,12 @@ app.controller('indexController', ['$scope', 'svProduct', function ($scope, svPr
     }, function (err) {
         console.log(err);
     });
+    $scope.companies = [];
+    svProduct.getCompanies().then(function (result) {
+        result.data.forEach(element => {
+            if(element.NHASANXUAT != 'undefined'){
+                $scope.companies.push(element);
+            }
+        });
+    });
 }]);
