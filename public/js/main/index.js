@@ -1,13 +1,13 @@
-var app = angular.module('app.linhkienfit',[]);
-app.controller('indexController', ['$scope', 'svProduct', function ($scope, svProduct) {
+var app = angular.module('app.index',[]);
+app.controller('indexController', ['$scope', 'svIndex', function ($scope, svIndex) {
     $scope.products = [];
-    svProduct.getProducts().then(function (result) {
+    svIndex.getProducts().then(function (result) {
         $scope.products = result.data;
     }, function (err) {
         console.log(err);
     });
     $scope.companies = [];
-    svProduct.getCompanies().then(function (result) {
+    svIndex.getCompanies().then(function (result) {
         result.data.forEach(element => {
             if(element.NHASANXUAT != 'undefined'){
                 $scope.companies.push(element);
