@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var apiRouter = require('./routes/api');
 var productRouter = require('./routes/product');
+var shopRouter = require('./routes/shop');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 app.use('/product', productRouter);
+app.use('/shop', shopRouter);
 app.listen(port, function () {
   console.log('App listeing on port', port);
 });
