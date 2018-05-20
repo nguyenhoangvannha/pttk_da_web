@@ -8,6 +8,7 @@ function ProductCtrl($scope, svProduct, $routeParams, $location) {
     $scope.companies = [];
     console.log(ID);
     $scope.products = [];
+    $scope.companyProducts = [];
     svProduct.getProduct(ID).then(function (result) {
         $scope.product = result.data[0];
         console.log($scope.product);
@@ -17,6 +18,12 @@ function ProductCtrl($scope, svProduct, $routeParams, $location) {
     svProduct.getProducts().then(function (result) {
         $scope.products = result.data;
         console.log($scope.products);
+    }, function (err) {
+        console.log(err);
+    });
+    svProduct.getCompanyProducts($scope.product.NHASANXUAT).then(function (result) {
+        $scope.companyProducts = result.data;
+        console.log('companyProducts',$scope.companyProducts);
     }, function (err) {
         console.log(err);
     });

@@ -9,6 +9,10 @@ app.factory('svProduct', ['$http', function ($http) {
         },
         getProducts: function () {
             return $http.get('/api/products');
+        },
+        getCompanyProducts: function (company) {
+            console.log('company',company);
+            return $http.get('/api/products/' + company);
         }
     }
 }])

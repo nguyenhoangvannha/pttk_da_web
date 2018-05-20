@@ -34,6 +34,16 @@ function getProducts(res) {
         }
     });
 }
+function getProducts(res, company) {
+    connection.query(`SELECT * FROM ${configValues.tbl_sanpham} WHERE NHASANXUAT='${company}'`, function (err, result, fields) {
+        if (err) {
+            console.log(err);
+            res.status(404).send([]);
+        } else {
+            res.send(result);
+        }
+    });
+}
 function getCompanies(res) {
     var sql = `SELECT NHASANXUAT FROM ${configValues.tbl_sanpham} GROUP BY NHASANXUAT HAVING count(*) > 0`;
     connection.query(sql, function (err, result, fields) {
@@ -47,6 +57,9 @@ function getCompanies(res) {
 }
 router.get('/products', function (req, res, next) {
     getProducts(res);
+})
+router.get('/products/:COMPANY', function (req, res, next) {
+    getProducts(res, req.params.COMPANY);
 })
 router.get('/companies', function (req, res, next) {
     getCompanies(res);
