@@ -34,7 +34,7 @@ function getProducts(res) {
         }
     });
 }
-function getProducts(res, company) {
+function getCompanyProducts(res, company) {
     connection.query(`SELECT * FROM ${configValues.tbl_sanpham} WHERE NHASANXUAT='${company}'`, function (err, result, fields) {
         if (err) {
             console.log(err);
@@ -59,7 +59,7 @@ router.get('/products', function (req, res, next) {
     getProducts(res);
 })
 router.get('/products/:COMPANY', function (req, res, next) {
-    getProducts(res, req.params.COMPANY);
+    getCompanyProducts(res, req.params.COMPANY);
 })
 router.get('/companies', function (req, res, next) {
     getCompanies(res);
