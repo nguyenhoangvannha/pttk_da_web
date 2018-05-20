@@ -644,28 +644,28 @@
                 <div id="row01" class="row">
                     <!-- Recently Viewed Item -->
                     <div class="col-lg-2" ng-repeat="i in [0,1,2,3,4]">
-                        <a href="/product/{{companyProducts[i].ID}}">
+                        <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                         </a>
                         <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].ID}}">
+                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                             </a>
                             <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].ID}}">
+                                <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                 </a>
                                 <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].ID}}">
+                                    <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                         <div class="viewed_image">
                                             <img src="/assets/images/{{companyProducts[i].HINHANH}}" alt="{{companyProducts[i].TEN}}">
                                         </div>
                                     </a>
                                     <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].ID}}">
+                                        <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                             <div class="viewed_price">{{companyProducts[i].GIA}}</div>
                                         </a>
                                         <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].ID}}">
+                                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                             </a>
-                                            <a href="/product/{{companyProducts[i].ID}}">{{companyProducts[i].TEN.substring(0,20)}}...</a>
+                                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">{{companyProducts[i].TEN.substring(0,20)}}...</a>
                                         </div>
                                     </div>
                                 </div>
@@ -686,150 +686,29 @@
                     <hr>
                 </div>
                 <div id="row02" class="row">
-                    <!-- Recently Viewed Item -->
-                    <div class="col-lg-2">
-                        <a href="/product/{{companyProducts[i].ID}}">
+                    <div class="col-lg-2" ng-repeat="i in [4,3,2,1,0]">
+                        <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                         </a>
                         <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].ID}}">
+                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                             </a>
                             <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].ID}}">
+                                <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                 </a>
                                 <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].ID}}">
+                                    <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                         <div class="viewed_image">
-                                            <img src="/assets/images/USB/Essencore-Neo-C20-02-280x315.jpg" alt="USB 2.0 KLEVV Neo C20 8GB...">
+                                            <img src="/assets/images/{{companyProducts[i].HINHANH}}" alt="{{companyProducts[i].TEN}}">
                                         </div>
                                     </a>
                                     <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].ID}}">
-                                            <div class="viewed_price">105,000₫</div>
+                                        <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
+                                            <div class="viewed_price">{{companyProducts[i].GIA}}</div>
                                         </a>
                                         <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].ID}}">
+                                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                                             </a>
-                                            <a href="#">USB 2.0 KLEVV Neo C20 8GB...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recently Viewed Item -->
-                    <div class="col-lg-2">
-                        <a href="/product/{{companyProducts[i].ID}}">
-                        </a>
-                        <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].ID}}">
-                            </a>
-                            <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].ID}}">
-                                </a>
-                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].ID}}">
-                                        <div class="viewed_image">
-                                            <img src="/assets/images/USB/DT-100-G3-16-01-280x315.jpg" alt="USB 3.0 Kingston DataTrav...">
-                                        </div>
-                                    </a>
-                                    <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].ID}}">
-                                            <div class="viewed_price">115,000₫</div>
-                                        </a>
-                                        <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].ID}}">
-                                            </a>
-                                            <a href="#">USB 3.0 Kingston DataTrav...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recently Viewed Item -->
-                    <div class="col-lg-2">
-                        <a href="/product/{{companyProducts[i].ID}}">
-                        </a>
-                        <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].ID}}">
-                            </a>
-                            <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].ID}}">
-                                </a>
-                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].ID}}">
-                                        <div class="viewed_image">
-                                            <img src="/assets/images/USB/Monkey-Tail-Attache-16-02-280x315.jpg" alt="USB 2.0 PNY Monkey Tail A...">
-                                        </div>
-                                    </a>
-                                    <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].ID}}">
-                                            <div class="viewed_price">115,000₫</div>
-                                        </a>
-                                        <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].ID}}">
-                                            </a>
-                                            <a href="#">USB 2.0 PNY Monkey Tail A...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recently Viewed Item -->
-                    <div class="col-lg-2">
-                        <a href="/product/{{companyProducts[i].ID}}">
-                        </a>
-                        <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].ID}}">
-                            </a>
-                            <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].ID}}">
-                                </a>
-                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].ID}}">
-                                        <div class="viewed_image">
-                                            <img src="/assets/images/USB/Sandisk-Ultra-Flair-CZ73-10-280x315.jpg" alt="USB 3.0 SanDisk Ultra Fla...">
-                                        </div>
-                                    </a>
-                                    <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].ID}}">
-                                            <div class="viewed_price">160,000₫</div>
-                                        </a>
-                                        <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].ID}}">
-                                            </a>
-                                            <a href="#">USB 3.0 SanDisk Ultra Fla...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Recently Viewed Item -->
-                    <div class="col-lg-2">
-                        <a href="/product/{{companyProducts[i].ID}}">
-                        </a>
-                        <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].ID}}">
-                            </a>
-                            <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].ID}}">
-                                </a>
-                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].ID}}">
-                                        <div class="viewed_image">
-                                            <img src="/assets/images/USB/Sandisk-CZ43-16-01-280x315.jpg" alt="USB 3.0 SanDisk Ultra Fit...">
-                                        </div>
-                                    </a>
-                                    <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].ID}}">
-                                            <div class="viewed_price">170,000₫</div>
-                                        </a>
-                                        <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].ID}}">
-                                            </a>
-                                            <a href="#">USB 3.0 SanDisk Ultra Fit...</a>
+                                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">{{companyProducts[i].TEN.substring(0,20)}}...</a>
                                         </div>
                                     </div>
                                 </div>

@@ -4,7 +4,8 @@ app.controller('productController', ['$scope', 'svProduct', '$routeParams' , '$l
 function ProductCtrl($scope, svProduct, $routeParams, $location) {
     $scope.product = {};
     var url = $location.absUrl().split('/');
-    var ID = url[4];
+    var ID = url[5];
+    var COMPANY = url[4];
     $scope.companies = [];
     console.log(ID);
     $scope.products = [];
@@ -21,7 +22,7 @@ function ProductCtrl($scope, svProduct, $routeParams, $location) {
     }, function (err) {
         console.log(err);
     });
-    svProduct.getCompanyProducts($scope.product.NHASANXUAT).then(function (result) {
+    svProduct.getCompanyProducts(COMPANY).then(function (result) {
         $scope.companyProducts = result.data;
         console.log('companyProducts',$scope.companyProducts);
     }, function (err) {
