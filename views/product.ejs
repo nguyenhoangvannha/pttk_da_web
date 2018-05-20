@@ -1,7 +1,7 @@
 <html lang="en" ng-app="app.product">
 
 <head>
-    <title>Xe hơi FIT - Sản phẩm</title>
+    <title>Linh kiện FIT - Sản phẩm</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="OneTech shop project">
@@ -643,7 +643,7 @@
                 </div>
                 <div id="row01" class="row">
                     <!-- Recently Viewed Item -->
-                    <div class="col-lg-2" ng-repeat="i in [0,1,2,3,4]">
+                    <!-- <div class="col-lg-2" ng-repeat="i in [0,1,2,3,4]">
                         <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
                         </a>
                         <div class="card" style="width: 10rem;">
@@ -671,8 +671,37 @@
                                 </div>
                             </div>
                         </div>
+                    </div> -->
+                    <div class="col-lg-2" ng-repeat="i in companyProducts | limitTo:6">
+                        <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                        </a>
+                        <div class="card" style="width: 10rem;">
+                            <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                            </a>
+                            <div class="owl-item">
+                                <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                                </a>
+                                <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                    <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                                        <div class="viewed_image">
+                                            <img src="/assets/images/{{i.HINHANH}}" alt="{{i.TEN}}">
+                                        </div>
+                                    </a>
+                                    <div class="viewed_content text-center">
+                                        <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                                            <div class="viewed_price">{{i.GIA}}₫</div>
+                                        </a>
+                                        <div class="viewed_name">
+                                            <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                                            </a>
+                                            <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">{{i.TEN.substring(0,20)}}...</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -686,29 +715,29 @@
                     <hr>
                 </div>
                 <div id="row02" class="row">
-                    <div class="col-lg-2" ng-repeat="i in [4,3,2,1,0]">
-                        <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
+                    <div class="col-lg-2" ng-repeat="i in companyProducts | limitTo:6">
+                        <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
                         </a>
                         <div class="card" style="width: 10rem;">
-                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
+                            <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
                             </a>
                             <div class="owl-item">
-                                <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
+                                <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
                                 </a>
                                 <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
+                                    <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
                                         <div class="viewed_image">
-                                            <img src="/assets/images/{{companyProducts[i].HINHANH}}" alt="{{companyProducts[i].TEN}}">
+                                            <img src="/assets/images/{{i.HINHANH}}" alt="{{i.TEN}}">
                                         </div>
                                     </a>
                                     <div class="viewed_content text-center">
-                                        <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
-                                            <div class="viewed_price">{{companyProducts[i].GIA}}₫</div>
+                                        <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
+                                            <div class="viewed_price">{{i.GIA}}₫</div>
                                         </a>
                                         <div class="viewed_name">
-                                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">
+                                            <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">
                                             </a>
-                                            <a href="/product/{{companyProducts[i].NHASANXUAT}}/{{companyProducts[i].ID}}">{{companyProducts[i].TEN.substring(0,20)}}...</a>
+                                            <a href="/product/{{i.NHASANXUAT}}/{{i.ID}}">{{i.TEN.substring(0,20)}}...</a>
                                         </div>
                                     </div>
                                 </div>

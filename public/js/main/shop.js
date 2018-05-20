@@ -8,5 +8,4 @@ function ShopCtrl($scope, svShop) {
     }, function (err) {
         console.log(err);
     });
-
 }
