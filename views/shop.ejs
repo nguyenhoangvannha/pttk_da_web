@@ -2,7 +2,7 @@
 <html lang="en" ng-app="app.shop">
 
 <head>
-    <title>Linh kiện FIT - Cửa hàng</title>
+    <title>Xe hơi FIT - Cửa hàng</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="OneTech shop project">
@@ -47,10 +47,10 @@
                                         <img src="/assets/images/icon/user.svg" alt="">
                                     </div>
                                     <div>
-                                        <a href="SignLog.html">Đăng ký</a>
+                                        <a href="SignLog">Đăng ký</a>
                                     </div>
                                     <div>
-                                        <a href="SignLog.html">Đăng nhập</a>
+                                        <a href="SignLog">Đăng nhập</a>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                         <div class="col-lg-2 col-sm-3 col-3 order-1">
                             <div class="logo_container">
                                 <div class="logo">
-                                    <a href="index.html">Linh Kiện FIT</a>
+                                    <a href="/">Xe hơi FIT</a>
                                 </div>
                             </div>
                         </div>
@@ -79,29 +79,29 @@
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
-                                        <form action="search.html" class="header_search_form clearfix">
+                                        <form action="search" class="header_search_form clearfix">
                                             <input type="search" required="required" class="header_search_input" placeholder="Tìm kiếm sản phẩm...">
                                             <div class="custom_dropdown">
                                                 <div class="custom_dropdown_list">
                                                     <span class="custom_dropdown_placeholder clc">Tất cả danh mục</span>
                                                     <i class="fas fa-chevron-down"></i>
                                                     <ul id="dropDown01" class="custom_list clc">
-                                                        <li onclick="location.href=search.html;">
+                                                        <li onclick="location.href=search;">
                                                             <a class="clc" href="#">Tất cả danh mục</a>
                                                         </li>
-                                                        <li onclick="location.href=search.html;">
+                                                        <li onclick="location.href=search;">
                                                             <a class="clc" href="#">HDD</a>
                                                         </li>
-                                                        <li onclick="location.href=search.html;">
+                                                        <li onclick="location.href=search;">
                                                             <a class="clc" href="#">Ổ cứng SSD Di Động</a>
                                                         </li>
-                                                        <li onclick="location.href=search.html;">
+                                                        <li onclick="location.href=search;">
                                                             <a class="clc" href="#">Ram Laptop, Desktop</a>
                                                         </li>
-                                                        <li onclick="location.href=search.html;">
+                                                        <li onclick="location.href=search;">
                                                             <a class="clc" href="#">SSD</a>
                                                         </li>
-                                                        <li onclick="location.href=search.html;">
+                                                        <li onclick="location.href=search;">
                                                             <a class="clc" href="#">USB</a>
                                                         </li>
                                                     </ul>
@@ -153,7 +153,7 @@
 
                                 <div class="cat_menu_container">
                                     <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
-                                        <a href="index.html">
+                                        <a href="/">
                                             <div class="cat_menu_text">Trang chủ</div>
                                         </a>
                                     </div>
@@ -565,19 +565,7 @@
                                 <div id="productCount" class="shop_product_count">
                                     <span>{{products.length}}</span> sản phẩm
                                 </div>
-                                <!-- <div class="shop_sorting">
-								<span>Sort by:</span>
-								<ul>
-									<li>
-										<span class="sorting_text">highest rated<i class="fas fa-chevron-down"></span></i>
-										<ul>
-											<li class="shop_sorting_button" data-isotope-option={ "sortBy": "original-order" }>highest rated</li>
-											<li class="shop_sorting_button" data-isotope-option={ "sortBy": "name" }>name</li>
-											<li class="shop_sorting_button"data-isotope-option={ "sortBy": "price" }>price</li>
-										</ul>
-									</li>
-								</ul>
-							</div> -->
+                                
                             </div>
 
                             <div class="product_grid">
@@ -586,10 +574,10 @@
                                 <div class="product_item" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
                                     <div class="product_border"></div>
                                     <div class="product_image d-flex flex-column align-items-center justify-content-center">
-                                        <img src="/assets/images/{{products[i].HINHANH}}" alt="" width="100" height="100">
+                                        <img src="/assets/carsdata{{products[i].HINHANH}}" alt="" width="100" height="100">
                                     </div>
                                     <div class="product_content ">
-                                        <div class="product_price ">{{products[i].GIA}}</div>
+                                        <div class="product_price ">{{products[i].GIABAN}}</div>
                                         <div class="product_name ">
                                             <div>
                                                 <a href="/product/{{products[i].NHASANXUAT}}/{{products[i].ID}}" tabindex="0">{{products[i].TEN.substring(0,16)}}...</a>
@@ -655,7 +643,7 @@
                                 Copyright &copy;
                                 <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with
                                 <i class="fa fa-heart " aria-hidden="true "></i> by
-                                <a href="# ">Linh kiện FIT</a>
+                                <a href="# ">Xe hơi FIT</a>
                                 <!-- Link back to Colorlib cant be removed. Template is licensed under CC BY 3.0. -->
                             </div>
                             <div class="logos ml-sm-auto ">
